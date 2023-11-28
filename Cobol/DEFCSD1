@@ -1,0 +1,34 @@
+//DEFINIT  JOB
+//DEFCSD   EXEC PGM=IDCAMS
+//SYSPRINT DD   SYSOUT=A
+//AMSDUMP  DD   SYSOUT=A
+//SYSIN    DD   *
+   DEFINE CLUSTER -
+            (NAME(CICSTS54.CICS.applid.DFHCSD) -
+            VOLUMES(volid)               -
+            KEYS(22 0)                   -                        1
+            INDEXED                      -
+            RECORDS(n1 n2)               -
+            RECORDSIZE(200 2000)         -                        2
+            FREESPACE(10 10)             -
+            SHAREOPTIONS(2)              -                        3
+            LOG(ALL)                     -                        4
+            LOGSTREAMID(CICSTS54.CICS.CSD.FWDRECOV)   -           4
+            BWO(NO)                                               4
+
+          DATA                           -
+            (NAME(CICSTS54.CICS.applid.DFHCSD.DATA)   -
+            CONTROLINTERVALSIZE(8192))          -
+          INDEX                                 -
+            (NAME(CICSTS54.CICS.applid.DFHCSD.INDEX))
+/*
+//INIT     EXEC PGM=DFHCSDUP,REGION=300K
+//STEPLIB  DD DSN=CICSTS54.V5R4.SDFHLOAD,DISP=SHR
+//DFHCSD   DD DSN=CICSTS54.CICS.applid.DFHCSD,DISP=NEW            5
+//SYSPRINT DD SYSOUT=A
+//SYSUDUMP DD SYSOUT=A
+//SYSIN    DD *
+           INITIALIZE
+           LIST ALL OBJECTS
+/*
+//
