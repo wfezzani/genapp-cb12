@@ -1,5 +1,6 @@
 #!/bin/bash
 echo "shell pid= " $$
+echo 'build number from getports script '+${BUILD_NUMBER}
 WA_DST_FOLDER=/home/wazi/data/project
 WA_SRC_FOLDER=/var/tmp/genapp-github
 BASE_PORT=29000
