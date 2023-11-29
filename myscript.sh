@@ -6,4 +6,4 @@ ssh root@10.3.20.206 "whoami;echo 'build number '+${BUILD_NUMBER};
                        echo 'workspace name '+${WORKSPACE};
                        echo 'WA_SRC_FOLDER '+${WA_SRC_FOLDER};
                        sudo chmod 777  /var/tmp/genapp-github/getports-jks1.sh;
-                       /var/tmp/genapp-github/getports-jks1.sh"
+                       source /var/tmp/genapp-github/getports-jks1.sh"
