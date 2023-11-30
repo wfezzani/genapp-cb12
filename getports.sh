@@ -22,8 +22,8 @@ echo "port2 =" $port2
 sudo podman run -d -it -p $port1:5000 -p $port2:$port2 -e AZN_API_SERVER_PORT=$port2 --name GENAPP-$CI_PIPELINE_ID docker.io/wfezzani/wazi-analyze:2023.2.0
 sudo podman cp -a $WA_SRC_FOLDER/genapp-cb12/. GENAPP-$CI_PIPELINE_ID:$WA_DST_FOLDER/source/
 sudo podman cp $WA_SRC_FOLDER/genapp-cb12/project.dat GENAPP-$CI_PIPELINE_ID:$WA_DST_FOLDER
-sudo podman cp $WA_SRC_FOLDER/genapp-cb12/wa_script.sh GENAPP-$CI_PIPELINE_ID:$WA_DST_FOLDER
+sudo podman cp $WA_SRC_FOLDER/genapp-cb12/wa-script.sh GENAPP-$CI_PIPELINE_ID:$WA_DST_FOLDER
 #sudo podman exec -e AZN_API_SERVER_PORT=$port2 GENAPP-$CI_PIPELINE_ID env
-sudo podman exec GENAPP-$CI_PIPELINE_ID chmod 777 /home/wazi/data/project/wa_script.sh
-sudo podman exec GENAPP-$CI_PIPELINE_ID /home/wazi/data/project/wa_script.sh
+sudo podman exec GENAPP-$CI_PIPELINE_ID chmod 777 /home/wazi/data/project/wa-script.sh
+sudo podman exec GENAPP-$CI_PIPELINE_ID /home/wazi/data/project/wa-script.sh
 echo "l'interface graphique est accessible à l'adresse suivante: https://10.3.20.206:$port1/login?api-server=10.3.20.206:$port2"
