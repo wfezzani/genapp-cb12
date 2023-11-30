@@ -1,5 +1,4 @@
 #!/bin/bash
-echo "hello world"
 scp -r ${WORKSPACE} root@10.3.20.206:/var/tmp/
 ssh root@10.3.20.206 "whoami;echo 'build number '+${BUILD_NUMBER};
                       export BUILD_NUMBER=$BUILD_NUMBER;
