@@ -10,6 +10,6 @@ scp -r ${WORKSPACE} $USER@$IPADDRESS:$GIT_FOLDER
 ssh $USER@$IPADDRESS "export BUILD_NUMBER=$BUILD_NUMBER;
                       export GIT_FOLDER=$GIT_FOLDER;
                       export JOB_BASE_NAME=$JOB_BASE_NAME;
-                       sudo chmod 777  $GIT_FOLDER/$JOB_BASE_NAME/getports-jks1.sh;
+                       sudo chmod 777  $GIT_FOLDER/$JOB_BASE_NAME/docker_process.sh;
                        cd $GIT_FOLDER/$JOB_BASE_NAME;
-                       ./getports-jks1.sh"
+                       ./docker_process.sh"
