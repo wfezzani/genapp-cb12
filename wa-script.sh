@@ -1,6 +1,5 @@
 #!/bin/bash
-#hello let's start Wazi Analyze !    
 wa-scan.sh project /home/wazi/data/project/project.dat
-echo "projet scanné! "
+echo "project scan completed :) "
 wa-startup.sh -p "ztecztec" > startup.log
-echo "Web UI disponible! "
+echo "Wazi Web UI is now available ! "
