@@ -1,7 +1,8 @@
 #!/bin/bash
-echo "hello world"
-scp -r ${WORKSPACE} root@10.3.20.206:/var/tmp/
-ssh root@10.3.20.206 "whoami;echo 'build number '+${BUILD_NUMBER};
+USER=root
+IPADDRESS=10.3.20.206
+scp -r ${WORKSPACE} $USER@$IPADDRESS:/var/tmp/
+ssh $USER@$IPADDRESS "whoami;echo 'build number '+${BUILD_NUMBER};
                       export BUILD_NUMBER=$BUILD_NUMBER;
                        echo 'build name '+${BUILD_NAME};
                        echo 'workspace name '+${WORKSPACE};
