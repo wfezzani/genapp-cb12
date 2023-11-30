@@ -28,7 +28,7 @@ sudo podman run -d -it -p $port1:5000 -p $port2:$port2 -e AZN_API_SERVER_PORT=$p
 # Copy project sources, the project.dat and the startup script from the Docker host to the Wazi container
 sudo podman cp -a $WA_SRC_FOLDER/. GENAPP-${BUILD_NUMBER}:$WA_DST_FOLDER/source/
 sudo podman cp $WA_SRC_FOLDER/project.dat GENAPP-${BUILD_NUMBER}:$WA_DST_FOLDER
-sudo podman cp $WA_SRC_FOLDER/wa-script.sh GENAPP-${BUILD_NUMBER}:$WA_DST_FOLDER
+sudo podman cp $WA_SRC_FOLDER/p.sh GENAPP-${BUILD_NUMBER}:$WA_DST_FOLDER
 #sudo podman exec -e AZN_API_SERVER_PORT=$port2 GENAPP-${BUILD_NUMBER} env
 
 # Run the startup script and generate the web UI link
