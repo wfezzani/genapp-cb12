@@ -1,5 +1,5 @@
 #!/bin/bash
-# UserID and PASSWORD for the Docker host 
+# UserID and IP Adress of the Docker host 
 USER=root
 IPADDRESS=10.3.20.206
 # Destinantion folder on the Docker host 
