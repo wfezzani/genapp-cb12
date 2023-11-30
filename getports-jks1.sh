@@ -2,7 +2,7 @@
 echo "shell pid= " $$
 echo 'build number from getports script '+${BUILD_NUMBER}
 WA_DST_FOLDER=/home/wazi/data/project
-WA_SRC_FOLDER=/var/tmp/genapp-github
+WA_SRC_FOLDER=$GIT_FOLDER/$JOB_BASE_NAME
 BASE_PORT=29000
 INCREMENT=1
 port1=$BASE_PORT
