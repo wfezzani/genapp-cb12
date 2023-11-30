@@ -1,7 +1,7 @@
 #!/bin/bash
 # UserID and PASSWORD for the Docker host 
-USER=root
-IPADDRESS=10.3.20.206
+export USER=root
+export IPADDRESS=10.3.20.206
 # Destinantion folder on the Docker host 
 GIT_FOLDER=/var/tmp/
 # Tranfer the git repository from the Jenkins server to the Docker server
